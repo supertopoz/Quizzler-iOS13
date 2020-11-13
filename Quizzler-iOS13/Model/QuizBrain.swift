@@ -1,21 +1,15 @@
 //
-//  ViewController.swift
+//  QuizBrain.swift
 //  Quizzler-iOS13
 //
-//  Created by Angela Yu on 12/07/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
+//  Created by Jason.Allshorn on 2020/11/14.
+//  Copyright © 2020 The App Brewery. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var progressBar: UIProgressView!
-    @IBOutlet weak var trueButton: UIButton!
-    @IBOutlet weak var falseButton: UIButton!
-    
-    var quiz = [
+struct QuizBrain {
+    let quiz = [
         Question(q: "A slug's blood is green.", a: "True"),
               Question(q: "Approximately one quarter of human bones are in the feet.", a: "True"),
               Question(q: "The total surface area of two human lungs is approximately 70 square metres.", a: "True"),
@@ -28,46 +22,16 @@ class ViewController: UIViewController {
               Question(q: "The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.", a: "False"),
               Question(q: "No piece of square dry paper can be folded in half more than 7 times.", a: "False"),
               Question(q: "Chocolate affects a dog's heart and nervous system; a few ounces are enough to kill a small dog.", a: "True")
-
     ]
-    
     var questionNumber = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        updateUI()
-    }
-
-    @IBAction func answerButtonPressed(_ sender: UIButton) {
-        
-        let userAnswer = sender.currentTitle
+    func checkAnswer(_ userAnswer: String) -> Bool {
         let actualAnswer = quiz[questionNumber].answer
-        
         if userAnswer == actualAnswer {
-            sender.backgroundColor = .green
+            return true
         } else {
-            sender.backgroundColor = .red
+            return false
         }
-        if questionNumber < quiz.count - 1 {
-            questionNumber += 1
-        } else {
-            questionNumber = 0
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            // Excecute after 3 seconds
-            self.updateUI()
-        }
-    }
-    
-    func updateUI(){
-        questionLabel.text = quiz[questionNumber].question
-        
-        self.trueButton.backgroundColor = .clear
-        self.falseButton.backgroundColor = .clear
-
-
     }
     
 }
-
