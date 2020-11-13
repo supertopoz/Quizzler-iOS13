@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A91F77F7255F1FD9002A7C5F /* QuizQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F77F6255F1FD9002A7C5F /* QuizQuestions.swift */; };
 		A91F77FA255F2977002A7C5F /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91F77F9255F2977002A7C5F /* Questions.swift */; };
 		AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */; };
 		AD4BDE4C22D878BA005BA4CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4BDE4B22D878BA005BA4CC /* SceneDelegate.swift */; };
@@ -19,7 +18,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A91F77F6255F1FD9002A7C5F /* QuizQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestions.swift; sourceTree = "<group>"; };
 		A91F77F9255F2977002A7C5F /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		AD4BDE4622D878BA005BA4CC /* Quizzler-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quizzler-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4BDE4922D878BA005BA4CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				AD4BDE5222D878BC005BA4CC /* Assets.xcassets */,
 				AD4BDE5422D878BC005BA4CC /* LaunchScreen.storyboard */,
 				AD4BDE5722D878BC005BA4CC /* Info.plist */,
-				A91F77F6255F1FD9002A7C5F /* QuizQuestions.swift */,
 				A91F77F9255F2977002A7C5F /* Questions.swift */,
 			);
 			path = "Quizzler-iOS13";
@@ -150,7 +147,6 @@
 			files = (
 				AD4BDE4E22D878BA005BA4CC /* ViewController.swift in Sources */,
 				AD4BDE4A22D878BA005BA4CC /* AppDelegate.swift in Sources */,
-				A91F77F7255F1FD9002A7C5F /* QuizQuestions.swift in Sources */,
 				A91F77FA255F2977002A7C5F /* Questions.swift in Sources */,
 				AD4BDE4C22D878BA005BA4CC /* SceneDelegate.swift in Sources */,
 			);
