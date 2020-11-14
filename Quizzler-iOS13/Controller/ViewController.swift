@@ -21,7 +21,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         updateUI()
     }
 
@@ -35,23 +34,18 @@ class ViewController: UIViewController {
         } else {
             sender.backgroundColor = .red
         }
-        if quizBrain.questionNumber < quizBrain.quiz.count - 1 {
-            quizBrain.questionNumber += 1
-        } else {
-            quizBrain.questionNumber = 0
-        }
+        quizBrain.nextQuestion()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            // Excecute after 3 seconds
             self.updateUI()
         }
     }
     
     func updateUI(){
-        questionLabel.text = quizBrain.quiz[quizBrain.questionNumber].question
+        questionLabel.text = quizBrain.getQuestionText()
         
         self.trueButton.backgroundColor = .clear
         self.falseButton.backgroundColor = .clear
-        progressBar.progress = Float(quizBrain.questionNumber + 1) / Float(quizBrain.quiz.count)
+        progressBar.progress = quizBrain.getProgress()
 
     }
     
